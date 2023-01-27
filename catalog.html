@@ -29,13 +29,12 @@
         <ul class="navigation__user-list">
           <li class="navigation__user-item">
             <a class="navigation__user-link" href="#">
-              <img class="navigation__user-icon" src="#" width="18" height="18" alt="Поиск.">
+              <span class="visually-hidden">поиск.</span>
             </a>
           </li>
           <li class="navigation__user-item">
             <a class="navigation__user-link" href="#">
-              <img class="navigation__user-icon" src="#" width="18" height="17"
-                alt="Избранное.">
+              <span class="visually-hidden">избранное.</span>
             </a>
           </li>
         </ul>
@@ -157,17 +156,17 @@
         <ul class="search-results__list">
           <li class="search-results__item">
             <a href="#" class="search-results__button button-dark">
-              <img class="search-results__icon" src="#" alt="Показать карточки.">
+              <span class="visually-hidden">Показать карточки.</span>
             </a>
           </li>
           <li class="search-results__item">
             <a href="#" class="search-results__button">
-              <img class="search-results__icon" src="#" alt="Фокус на карточке.">
+              <span class="visually-hidden">Фокус на карточке.</span>
             </a>
           </li>
           <li class="search-results__item">
             <a href="#" class="search-results__button">
-              <img class="search-results__icon" src="#" alt="Показать список.">
+              <span class="visually-hidden">Показать список.</span>
             </a>
           </li>
         </ul>
@@ -188,7 +187,12 @@
             <span class="hotels__price">От 4000 ₽ </span>
             <a class="hotels__detailed" href="#">подробнее</a>
             <button class="hotels__favorites" type="button">в избранное</button>
-            <span class="hotels__stars-rating">4 звезды</span>
+            <ul class="hotels__stars-rating">
+              <li class="hotels__star">1</li>
+              <li class="hotels__star">1</li>
+              <li class="hotels__star">1</li>
+              <li class="hotels__star">1</li>
+            </ul>
             <span class="hotels__rating">Рейтинг: 8,5</span>
           </li>
 
@@ -202,10 +206,12 @@
             <span class="hotels__price">От 5000 ₽ </span>
             <a class="hotels__detailed" href="#">подробнее</a>
             <button class="hotels__favorites" type="button">в избранное</button>
-            <!-- <p class="hotels__stars hotels__stars--star-4">
-              <span class="visually-hidden">4 звезды</span>
-            </p> -->
-            <span class="hotels__stars-rating">4 звезды</span>
+            <ul class="hotels__stars-rating">
+              <li class="hotels__star">1</li>
+              <li class="hotels__star">1</li>
+              <li class="hotels__star">1</li>
+              <li class="hotels__star">1</li>
+            </ul>
             <span class="hotels__rating">Рейтинг: 9,2</span>
           </li>
 
@@ -219,7 +225,11 @@
             <span class="hotels__price">От 2500 ₽</span>
             <a class="hotels__detailed" href="#">подробнее</a>
             <button class="hotels__favorites" type="button"> в избранное</button>
-            <span class="hotels__stars-rating">3 звезды</span>
+            <ul class="hotels__stars-rating">
+              <li class="hotels__star">1</li>
+              <li class="hotels__star">1</li>
+              <li class="hotels__star">1</li>
+            </ul>
             <span class="hotels__rating">Рейтинг: 6,9 </span>
           </li>
 
@@ -233,7 +243,10 @@
             <span class="hotels__price">От 1500 ₽</span>
             <a class="hotels__detailed" href="#">подробнее</a>
             <button class="hotels__favorites" type="button"> в избранное</button>
-            <span class="hotels__stars-rating">2 звезды</span>
+            <ul class="hotels__stars-rating">
+              <li class="hotels__star">1</li>
+              <li class="hotels__star">1</li>
+            </ul>
             <span class="hotels__rating">Рейтинг: 5,0 </span>
           </li>
         </ul>
