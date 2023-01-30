@@ -3,6 +3,7 @@
 
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="styles/styles.css">
     <title>Каталог</title>
   </head>
 
@@ -35,6 +36,7 @@
           <li class="navigation__user-item">
             <a class="navigation__user-link" href="#">
               <span class="visually-hidden">избранное.</span>
+              <span class="navigation__user-number">12</span>
             </a>
           </li>
         </ul>
@@ -123,7 +125,7 @@
                     от
                   </label>
                 </li>
-                <li class="catalog-filter_item">
+                <li class="catalog-filter__item">
                   <label class="catalog-filter__number-label">
                     <input class="catalog-filter__number-input" type="number" name="high-price" value="9000">
                     до
@@ -179,7 +181,7 @@
 
           <!-- 1 hotel -->
           <li class="hotels__item">
-            <a class="hotels-__ink" href="#">
+            <a class="hotels__link" href="#">
               <img class="hotels__image" src="images/hotel-1.jpg" width="300" height="212" alt="Дырка в горе и звезды.">
               <h3 class="hotels__title title-little">Amara Resort & Spa </h3>
             </a>
@@ -200,12 +202,12 @@
           <li class="hotels__item">
             <a class="hotels__link" href="#">
               <img class="hotels__image" src="images/hotel-2.jpg" width="300" height="212" alt="Радуга над горами.">
-              <h3 class="hotels__title itle-little">Villas at Poco Diablo</h3>
+              <h3 class="hotels__title title-little">Villas at Poco Diablo</h3>
             </a>
             <span class="hotels__type">Гостиница</span>
             <span class="hotels__price">От 5000 ₽ </span>
             <a class="hotels__detailed" href="#">подробнее</a>
-            <button class="hotels__favorites" type="button">в избранное</button>
+            <button class="hotels__favorites hotels__favorites--green" type="button">в избранное</button>
             <ul class="hotels__stars-rating">
               <li class="hotels__star">1</li>
               <li class="hotels__star">1</li>
@@ -219,7 +221,7 @@
           <li class="hotels__item">
             <a class="hotels__link" href="#">
               <img class="hotels__image" src="images/hotel-3.jpg" width="300" height="212" alt="Горы при свете дня.">
-              <h3 class="hotels__title itle-little">Desert Quail Inn</h3>
+              <h3 class="hotels__title title-little">Desert Quail Inn</h3>
             </a>
             <span class="hotels__type">Гостиница</span>
             <span class="hotels__price">От 2500 ₽</span>
@@ -237,7 +239,7 @@
           <li class="hotels__item">
             <a class="hotels__link" href="#">
               <img class="hotels__image" src="images/hotel-4.jpg" width="300" height="212" alt="Горы при ночном небе.">
-              <h3 class="hotels__title itle-little">GreenTree Inn</h3>
+              <h3 class="hotels__title title-little">GreenTree Inn</h3>
             </a>
             <span class="hotels__type">Гостиница</span>
             <span class="hotels__price">От 1500 ₽</span>
@@ -253,7 +255,7 @@
 
         <!-- Pagination -->
         <ul class="pagination">
-          <li class="pagination__item">
+          <li class="pagination__item pagination__item--active">
             <a class="pagination__link pagination__link-current">1</a>
           </li>
           <li class="pagination__item">
@@ -265,8 +267,8 @@
           <li class="pagination__item">
             <a class="pagination__link" href="#">4</a>
           </li>
-          <li class="pagination__item ">
-            <a class="pagination__link pagination__link-point" href="#">...</a>
+          <li class="pagination__item pagination__item--more">
+            <a class="pagination__link pagination__link-current" href="#">...</a>
           </li>
           <li class="pagination__item">
             <a class="pagination__link" href="#">10</a>
@@ -281,7 +283,7 @@
         <form class="newsletter__form" action="https://echo.htmlacademy.ru/" method="post">
           <input class="newsletter__field" type="email" placeholder="Ваш e-mail" name="newsletter-email"
             id="newsletter-email" required>
-          <button class="newsletter-button" type="submit">Подписаться</button>
+          <button class="newsletter__button" type="submit">Подписаться</button>
         </form>
       </section>
     </main>
