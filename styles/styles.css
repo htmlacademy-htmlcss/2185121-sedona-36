@@ -14,6 +14,19 @@
   font-display: swap;
 }
 
+/* visually-hidden */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+/* body */
 .page-body {
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 18px;
@@ -58,6 +71,22 @@
   text-transform: uppercase;
   font-weight: 700;
   text-decoration: none;
+}
+
+.navigation__user-item:first-child .navigation__user-link {
+  display: block;
+  background-image: url("../images/svg-images/search.svg");
+  background-repeat: no-repeat;
+  width: 20px;
+  height: 20px;
+}
+
+.navigation__user-item:nth-child(2) .navigation__user-link {
+  display: block;
+  background-image: url("../images/svg-images/heart.svg");
+  background-repeat: no-repeat;
+  width: 20px;
+  height: 20px;
 }
 
 /* hero */
@@ -390,3 +419,5 @@
 .pagination__item--more {
   background-color: #ffffff;
 }
+
+/* SANDBOX */
