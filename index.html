@@ -70,12 +70,12 @@
           <!-- 1 block -->
           <ul class="advantages__list">
             <li class="advantages__item">
-              <div class="advantages__item-wrapper">
-                <h3 class="advantages__title title-little">Настоящий городок</h3>
-                <p class="advantages__description">Седона — не аттракцион для туристов, там течёт своя жизнь
-                </p>
-              </div>
-              <div class="advantages__photo-wrapper">
+              <div class="image-block-wrapper">
+                <div class="advantages__item-wrapper">
+                  <h3 class="advantages__title title-little">Настоящий городок</h3>
+                  <p class="advantages__description">Седона — не аттракцион для туристов, там течёт своя жизнь
+                  </p>
+                </div>
                 <img class="advantages__photo" src="images/open-bar.jpg" width="800" height="384" alt="Вид на салун.">
               </div>
             </li>
@@ -99,14 +99,14 @@
 
             <!-- 3 block -->
             <li class="advantages__item">
-              <div class="advantages__photo-wrapper">
+              <div class="image-block-wrapper">
                 <img class="advantages__photo" src="images/devil-bridge.jpg" width="800" height="385"
                   alt="Вид на каньон.">
-              </div>
-              <div class="advantages__item-wrapper">
-                <h3 class="advantages__title title-little">Там есть мост дьявола</h3>
-                <p class="advantages__description">Да, по нему можно пройти! Если вы осмелитесь, разумеется
-                </p>
+                <div class="advantages__item-wrapper">
+                  <h3 class="advantages__title title-little">Там есть мост дьявола</h3>
+                  <p class="advantages__description">Да, по нему можно пройти! Если вы осмелитесь, разумеется
+                  </p>
+                </div>
               </div>
             </li>
           </ul>
@@ -121,7 +121,7 @@
           <ul class="advantages__sublist">
             <li class="advantages__subitem lightgray-box">
               <!-- логотип домик -->
-              <span class="advantages__subicon">1</span>
+              <span class="advantages__subicon advantages__home-icon"></span>
               <h3 class="advantages__subtitle title-little">Жильё</h3>
               <p class="advantages__subdescription"> Рекомендуем пожить в настоящем мотеле,
                 всё как в кино!
@@ -129,7 +129,7 @@
             </li>
             <li class="advantages__subitem white-box">
               <!-- логотип бургер -->
-              <span class="advantages__subicon">1</span>
+              <span class="advantages__subicon advantages__eat-icon"></span>
               <h3 class="advantages__subtitle title-little">Еда</h3>
               <p class="advantages__subdescription">Всегда заказывайтетоповый фирменный бургер, вы не
                 разочаруетесь!
@@ -137,7 +137,7 @@
             </li>
             <li class="advantages__subitem lightgray-box">
               <!-- логотип подарок -->
-              <span class="advantages__subicon">1</span>
+              <span class="advantages__subicon advantages__gift-icon"></span>
               <h3 class="advantages__subtitle title-little">Сувениры</h3>
               <p class="advantages__subdescription">Не только китайского,но и настоящего местного
                 производства!
@@ -149,7 +149,7 @@
         <!-- Hotel Search -->
         <section class="hotel-search">
           <h2 class="hotel-search__title title-big">Заинтересовались?</h2>
-          <p class="hotel-search__text">Укажите предполагаемые даты поездки,и мы покажем вам лучшие предложения
+          <p class="hotel-search__text">Укажите предполагаемые даты поездки,<br>и мы покажем вам лучшие предложения
             гостиниц
             в Седоне
           </p>
@@ -178,16 +178,29 @@
           <ul class="footer-social__list">
             <li class="footer-social__item">
               <a class="footer-social__link" href="https://vk.com/htmlacademy">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="15" fill="none">
+                  <path fill="#83B3D3" fill-rule="evenodd"
+                    d="M24.12 1.8c.16-.54 0-.94-.8-.94H20.7c-.67 0-.98.34-1.15.73 0 0-1.33 3.2-3.22 5.27-.61.6-.9.8-1.23.8-.16 0-.41-.2-.41-.75v-5.1c0-.66-.19-.95-.74-.95H9.82c-.42 0-.67.3-.67.59 0 .62.95.76 1.04 2.51v3.8c0 .83-.15.98-.48.98-.9 0-3.06-3.2-4.34-6.88-.25-.72-.5-1-1.18-1H1.57c-.75 0-.9.34-.9.73 0 .68.89 4.07 4.14 8.55 2.17 3.06 5.23 4.72 8 4.72 1.68 0 1.88-.37 1.88-1v-2.32c0-.74.16-.88.7-.88.38 0 1.05.19 2.6 1.66 1.79 1.75 2.08 2.54 3.08 2.54h2.63c.75 0 1.12-.37.9-1.1-.23-.72-1.08-1.77-2.2-3.02-.62-.71-1.54-1.48-1.82-1.86-.39-.5-.28-.71 0-1.15 0 0 3.2-4.42 3.54-5.93Z"
+                    clip-rule="evenodd" />
+                </svg>
                 <span class="visually-hidden">Иконка Вконтакте</span>
               </a>
             </li>
             <li class="footer-social__item">
               <a class="footer-social__link" href="https://t.me/htmlacademy">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="16" fill="none">
+                  <path fill="#83B3D3"
+                    d="M16.79.96.84 7.1c-1.09.44-1.08 1.05-.2 1.32l4.1 1.28 9.47-5.98c.44-.27.85-.13.52.17l-7.68 6.93-.28 4.22c.41 0 .6-.2.83-.41l1.99-1.94 4.13 3.06c.77.42 1.31.2 1.5-.71l2.72-12.8c.28-1.1-.43-1.61-1.16-1.28Z" />
+                </svg>
                 <span class="visually-hidden">Иконка Телеграм</span>
               </a>
             </li>
             <li class="footer-social__item">
               <a class="footer-social__link" href="https://www.youtube.com/user/htmlacademyru">
+                <svg xmlns="http://www.w3.org/2000/svg" width="23" height="18" fill="none">
+                  <path fill="#83B3D3"
+                    d="M18.94.356H3.507C1.647.356.333 1.95.333 3.756V13.85c0 1.913 1.314 3.506 3.174 3.506H19.16c1.642 0 3.174-1.593 3.174-3.4v-10.2c-.219-1.806-1.532-3.4-3.393-3.4ZM7.995 12.894V4.819l7.333 4.037-7.333 4.038Z" />
+                </svg>
                 <span class="visually-hidden">Иконка Ютуб</span>
               </a>
             </li>
