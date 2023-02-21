@@ -711,7 +711,8 @@ html {
   width: 340px;
   border: 1px solid #e6e6e6;
   border-radius: 4px;
-  padding: 20px;
+  padding: 19px;
+  grid-template-rows: 1fr auto;
 }
 
 .hotels__title {
