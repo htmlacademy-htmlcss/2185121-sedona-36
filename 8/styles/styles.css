@@ -852,6 +852,7 @@ html {
   padding: 8px 50px;
   max-width: 191px;
   cursor: pointer;
+  border-radius: 4px;
 }
 
 /* search result */
@@ -864,6 +865,7 @@ html {
   /* text-align: start; */
   margin-left: 0;
   margin-right: auto;
+  align-self: center;
 }
 
 .search-results__select {
@@ -1106,11 +1108,25 @@ html {
   background-color: #ffffff;
 }
 
+.pagination__link:hover {
+  outline: 1px solid #82b3d3;
+}
+
+.pagination__link:focus {
+  outline: 1px solid #82b3d3;
+  outline-offset: 0;
+}
+
+.pagination__link:active {
+  outline: none;
+}
+
 .pagination__item--more:hover,
 .pagination__item--more:focus,
 .pagination__item--more:active {
   background-color: #ffffff;
   color: #000000;
+  outline: none;
 }
 
 .pagination__item--active:hover,
@@ -1118,5 +1134,6 @@ html {
 .pagination__item--active:active {
   background-color: #f2f2f2;
   color: #000000;
+  outline: none;
 }
 /* SANDBOX */
