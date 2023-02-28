@@ -148,6 +148,7 @@ html {
 
 .catalog-filter__button-reset:active {
   color: rgba(255, 255, 255, 0.3);
+  outline: none;
 }
 
 .catalog-filter__button-reset:disabled {
@@ -623,6 +624,7 @@ html {
 .footer-social__link {
   display: flex;
   padding: 12px 11px;
+  color: #83b3d3;
 }
 
 .footer-social__telephone {
@@ -637,6 +639,7 @@ html {
 
 .footer-social__website {
   display: flex;
+  color: #000000;
 }
 
 .footer-social__telephone:hover {
@@ -652,17 +655,32 @@ html {
   color: rgba(117, 97, 87, 0.3);
 }
 
-.social-icon {
-  fill: #000000;
+.footer-social__link:hover {
+  color: #68a2ca;
 }
 
-.social-icon:hover {
-  fill: #68a2ca;
+.footer-social__link:focus {
+  outline: none;
+  color: #68a2ca;
 }
 
-/* .footer-social__website:hover .web-site-icon {
-  fill: #68a2ca;
-} */
+.footer-social__link:active {
+  color: rgba(104, 162, 202, 0.3);
+}
+
+.footer-social__website:hover {
+  color: #756157;
+}
+
+.footer-social__website:focus {
+  outline: none;
+  color: #756157;
+}
+
+.footer-social__website:active {
+  color: rgba(117, 97, 87, 0.3);
+}
+
 /* catalog form */
 
 .inner-header {
