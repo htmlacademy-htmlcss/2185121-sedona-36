@@ -80,6 +80,12 @@ html {
   background-color: #7db54f;
 }
 
+/* disabled для ссылок */
+.button--brown-disabled {
+  background-color: #e5e5e5;
+  color: #ffffff;
+}
+
 /* Состояния button--blue  */
 .button--blue:hover {
   background-color: #68a2ca;
@@ -298,9 +304,7 @@ html {
   background-color: #000000;
   background-image: url("../images/hero-index-background.jpg");
   background-repeat: no-repeat;
-  /* background-size: 100% auto; */
   background-size: cover;
-  width: 1200px;
   margin: 0 auto;
   padding-top: 51px;
   padding-bottom: 82px;
@@ -308,7 +312,10 @@ html {
 
 .hero::after {
   position: absolute;
-  content: url("../images/svg-images/decorate-triangle.svg");
+  content: "";
+  background-image: url("../images/svg-images/decorate-triangle.svg");
+  background-repeat: no-repeat;
+  background-size: 100%;
   bottom: 0;
   right: 0;
   width: 100%;
@@ -394,8 +401,11 @@ html {
   width: 60px;
   height: 2px;
   background-color: rgba(0, 0, 0, 0.3);
-  top: 86px;
-  left: 58px;
+  /* top: 86px;
+  left: 58px; */
+  left: 50%;
+  transform: translate(-50%);
+  bottom: -32px;
 }
 
 .advantages__item-wrapper .advantages__title::after {
@@ -460,7 +470,8 @@ html {
 .advantages__subitem:nth-child(1)::before {
   position: absolute;
   content: url("../images/svg-images/home-icon.svg");
-  left: 163px;
+  left: 50%;
+  transform: translate(-50%);
   top: 81px;
 }
 
@@ -468,14 +479,15 @@ html {
   position: absolute;
   content: url("../images/svg-images/food-icon.svg");
   left: 50%;
-  margin-left: -37px;
+  transform: translate(-50%);
   top: 82px;
 }
 
 .advantages__subitem:nth-child(3)::before {
   position: absolute;
   content: url("../images/svg-images/gift-icon.svg");
-  left: 168px;
+  left: 50%;
+  transform: translate(-50%);
   top: 79px;
 }
 
@@ -616,15 +628,18 @@ html {
   padding: 0;
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
   max-width: 150px;
   justify-content: center;
 }
 
 .footer-social__link {
   display: flex;
-  padding: 12px 11px;
+  padding: 11px 12px;
   color: #83b3d3;
+}
+
+.footer-social__item {
+  display: flex;
 }
 
 .footer-social__telephone {
@@ -730,10 +745,13 @@ html {
 
 .breadcrumbs__item:not(:last-child)::after {
   position: absolute;
-  content: url("../images/svg-images/breadcrumbs-arrow.svg");
-  bottom: 11px;
+  content: "";
+  background: url("../images/svg-images/breadcrumbs-arrow.svg") no-repeat center / 100%;
+  width: 8px;
   height: 10px;
   right: -18px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .breadcrumbs__link {
@@ -805,6 +823,7 @@ html {
 .catalog-filter__number-input {
   font-family: "PT Sans", Arial, sans-serif;
   padding: 12px 20px;
+  padding-right: 40px;
   border-radius: 4px 0 0 4px;
   border: none;
   background-color: #f2f2f2;
@@ -814,12 +833,39 @@ html {
   line-height: 24px;
 }
 
+.catalog-filter__number-label {
+  display: block;
+  position: relative;
+}
+
 .catalog-filter__number-input::-webkit-outer-spin-button,
 .catalog-filter__number-input::-webkit-inner-spin-button {
   -webkit-appearance: none;
 }
 
-.filter-to {
+.filter-from::after {
+  content: "от";
+  position: absolute;
+  color: #000000;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  line-height: 24px;
+  opacity: 0.3;
+}
+
+.filter-to::after {
+  content: "до";
+  position: absolute;
+  color: #000000;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  line-height: 24px;
+  opacity: 0.3;
+}
+
+.filter-to .catalog-filter__number-input {
   border-radius: 0 4px 4px 0;
   margin-left: 2px;
 }
@@ -1098,13 +1144,11 @@ html {
 
 .pagination__link-current {
   color: #000000;
-}
-
-.pagination__item--active {
   background-color: #f2f2f2;
 }
 
 .pagination__item--more {
+  color: #000000;
   background-color: #ffffff;
 }
 
@@ -1129,9 +1173,9 @@ html {
   outline: none;
 }
 
-.pagination__item--active:hover,
-.pagination__item--active:focus,
-.pagination__item--active:active {
+.pagination__link-current:hover,
+.pagination__link-current:focus,
+.pagination__link-current:active {
   background-color: #f2f2f2;
   color: #000000;
   outline: none;
