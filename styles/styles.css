@@ -221,6 +221,14 @@ html {
   position: relative;
 }
 
+.navigation__link:hover {
+  background-color: rgba(211, 211, 211, 0.3);
+}
+.logo-link:hover {
+  background-color: transparent;
+  opacity: 0.6;
+}
+
 .navigation__item .navigation__link {
   padding: 20px 16px;
 }
@@ -231,14 +239,13 @@ html {
 }
 
 .navigation__link-current::after {
-  /* border-bottom: 2px solid #756257; */
   content: "";
   position: absolute;
   height: 2px;
   background-color: #756257;
   bottom: 0;
-  left: 15px;
-  right: 15px;
+  left: 16px;
+  right: 16px;
 }
 
 .logo-link {
@@ -596,6 +603,7 @@ html {
 .newsletter__field {
   font-family: "PT Sans", Arial, sans-serif;
   min-width: 452px;
+  color: #000000;
   background-color: #f2f2f2;
   border: none;
   border-radius: 4px 0 0 4px;
@@ -603,6 +611,25 @@ html {
   font-size: 18px;
   line-height: 24px;
   padding: 12px 20px;
+}
+
+.newsletter__field:hover {
+  background-color: #e6e6e6;
+}
+
+.newsletter__field:focus {
+  background-color: #e6e6e6;
+  outline: 3px solid #83b3d3;
+}
+
+.newsletter__field:not(:placeholder-shown) {
+  outline: 2px solid #000000;
+  background-color: #f2f2f2;
+}
+
+.newsletter__field::placeholder {
+  color: #000000;
+  opacity: 0.6;
 }
 
 .newsletter__button {
@@ -762,6 +789,26 @@ html {
   line-height: 21px;
 }
 
+.breadcrumbs__item:first-child .breadcrumbs__link:hover {
+  opacity: 0.6;
+}
+
+.breadcrumbs__item:first-child .breadcrumbs__link:active {
+  opacity: 0.3;
+}
+
+.breadcrumbs__link:hover {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.breadcrumbs__link:focus {
+  outline: none;
+}
+
+.breadcrumbs__link:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
 /* filter */
 .catalog-filter {
   display: flex;
@@ -838,13 +885,29 @@ html {
   position: relative;
 }
 
-.catalog-filter__number-input::-webkit-outer-spin-button,
-.catalog-filter__number-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
+.catalog-filter__number-label:hover .catalog-filter__number-input {
+  background-color: #e6e6e6;
 }
 
-.filter-from::after {
-  content: "от";
+.catalog-filter__number-input:focus {
+  outline: 3px solid #83b3d3;
+}
+
+.catalog-filter__number-input:not(:placeholder-shown) {
+  outline: 2px solid #000000;
+}
+
+.catalog-filter__number-input::placeholder {
+  color: #000000;
+}
+
+.catalog-filter__number-input::-webkit-outer-spin-button,
+.catalog-filter__number-input::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+.filter-from .catalog-filter__text {
   position: absolute;
   color: #000000;
   right: 20px;
@@ -854,8 +917,7 @@ html {
   opacity: 0.3;
 }
 
-.filter-to::after {
-  content: "до";
+.filter-to .catalog-filter__text {
   position: absolute;
   color: #000000;
   right: 20px;
@@ -870,6 +932,126 @@ html {
   margin-left: 2px;
 }
 
+/* checbox */
+.catalog-filter__checkbox-label {
+  position: relative;
+  display: block;
+  padding-left: 36px;
+}
+
+.catalog-filter__checkbox-input:checked + .control-mark::before {
+  position: absolute;
+  content: "";
+  background: url("../images/svg-images/checkbox-mark.svg") no-repeat;
+  width: 12px;
+  height: 10px;
+  left: 4px;
+  top: 6px;
+}
+
+/* radio */
+.catalog-filter__radio-label {
+  position: relative;
+  display: block;
+  padding-left: 36px;
+}
+
+.catalog-filter__radio-input:checked + .control-mark::before {
+  position: absolute;
+  content: "";
+  background: url("../images/svg-images/radio-mark.svg") no-repeat;
+  background-size: cover;
+  width: 10px;
+  height: 10px;
+  left: 5px;
+  top: 5px;
+}
+
+/* mark */
+.control-mark {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: #ffffff;
+  border-radius: 4px;
+  left: 0;
+  top: 1px;
+}
+
+.catalog-filter__radio-label .control-mark {
+  border-radius: 50%;
+}
+
+/* states checkbox-radio */
+.catalog-filter__radio-label:hover,
+.catalog-filter__checkbox-label:hover {
+  opacity: 0.6;
+}
+
+.catalog-filter__radio-input:focus + .control-mark,
+.catalog-filter__checkbox-input:focus + .control-mark {
+  outline: 3px solid #83b3d3;
+}
+
+.catalog-filter__radio-label:active,
+.catalog-filter__checkbox-label:active {
+  opacity: 0.3;
+}
+
+.catalog-filter__radio-input:disabled + .control-mark,
+.catalog-filter__checkbox-input:disabled + .control-mark {
+  outline: 3px solid #242424;
+}
+
+/* filter-range */
+.catalog-filter__range-scale {
+  position: relative;
+  height: 4px;
+  background-color: rgb(255, 255, 255, 0.3);
+  margin-top: 32px;
+}
+
+.catalog-filter__range-bar {
+  position: absolute;
+  height: 4px;
+  background-color: #ffffff;
+}
+
+.catalog-filter__range-toggle {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.catalog-filter__range-toggle:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.catalog-filter__range-toggle:focus {
+  outline: 3px solid #83b3d3;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.catalog-filter__range-toggle:active {
+  outline: 2px solid #83b3d3;
+  box-shadow: 0 7px 15px rgba(0, 0, 0, 0.4);
+}
+
+.toggle-min {
+  left: -1px;
+  top: -8px;
+}
+
+.toggle-max {
+  right: 0;
+  top: -8px;
+}
+
+/* filter-button */
 .button-filter-wrapper {
   display: flex;
   flex-direction: column;
@@ -1048,6 +1230,10 @@ html {
   grid-column: 1/-1;
   text-decoration: none;
   display: block;
+}
+
+.hotels__link:hover {
+  opacity: 0.6;
 }
 
 .hotels__image {
