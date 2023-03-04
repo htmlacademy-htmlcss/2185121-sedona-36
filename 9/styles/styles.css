@@ -885,22 +885,6 @@ html {
   position: relative;
 }
 
-.catalog-filter__number-label:hover .catalog-filter__number-input {
-  background-color: #e6e6e6;
-}
-
-.catalog-filter__number-input:focus {
-  outline: 3px solid #83b3d3;
-}
-
-.catalog-filter__number-input:not(:placeholder-shown) {
-  outline: 2px solid #000000;
-}
-
-.catalog-filter__number-input::placeholder {
-  color: #000000;
-}
-
 .catalog-filter__number-input::-webkit-outer-spin-button,
 .catalog-filter__number-input::-webkit-inner-spin-button {
   appearance: none;
@@ -930,6 +914,22 @@ html {
 .filter-to .catalog-filter__number-input {
   border-radius: 0 4px 4px 0;
   margin-left: 2px;
+}
+
+.catalog-filter__number-label:hover .catalog-filter__number-input {
+  background-color: #e6e6e6;
+}
+
+.catalog-filter__number-input:focus {
+  outline: 3px solid #83b3d3;
+}
+
+.catalog-filter__number-input:not(:placeholder-shown) {
+  outline: 2px solid #000000;
+}
+
+.catalog-filter__number-input::placeholder {
+  color: #000000;
 }
 
 /* checbox */
@@ -1001,6 +1001,7 @@ html {
 .catalog-filter__radio-input:disabled + .control-mark,
 .catalog-filter__checkbox-input:disabled + .control-mark {
   outline: 3px solid #242424;
+  opacity: 0.1;
 }
 
 /* filter-range */
@@ -1008,7 +1009,8 @@ html {
   position: relative;
   height: 4px;
   background-color: rgb(255, 255, 255, 0.3);
-  margin-top: 32px;
+  margin-top: 30px;
+  margin-bottom: 6px;
 }
 
 .catalog-filter__range-bar {
