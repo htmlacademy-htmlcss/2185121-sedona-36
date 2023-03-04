@@ -620,6 +620,8 @@ html {
 .newsletter__field:focus {
   background-color: #e6e6e6;
   outline: 3px solid #83b3d3;
+  position: relative;
+  z-index: 2;
 }
 
 .newsletter__field:not(:placeholder-shown) {
@@ -899,6 +901,7 @@ html {
   transform: translateY(-50%);
   line-height: 24px;
   opacity: 0.3;
+  z-index: 2;
 }
 
 .filter-to .catalog-filter__text {
@@ -909,6 +912,7 @@ html {
   transform: translateY(-50%);
   line-height: 24px;
   opacity: 0.3;
+  z-index: 2;
 }
 
 .filter-to .catalog-filter__number-input {
@@ -922,6 +926,8 @@ html {
 
 .catalog-filter__number-input:focus {
   outline: 3px solid #83b3d3;
+  position: relative;
+  z-index: 1;
 }
 
 .catalog-filter__number-input:not(:placeholder-shown) {
