@@ -1613,9 +1613,17 @@ html {
   opacity: 0.3;
 }
 
+.tooltip-button:hover + .tooltip-description {
+  display: block;
+}
+
+.tooltip-button:focus + .tooltip-description {
+  display: block;
+}
+
 .tooltip-description {
   position: absolute;
-  display: block;
+  display: none;
   width: 256px;
   font-weight: 400;
   font-size: 16px;
