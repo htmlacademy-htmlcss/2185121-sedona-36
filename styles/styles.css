@@ -363,6 +363,7 @@ html {
 .advantages__text-wrapper {
   width: 100%;
   padding: 69px 254px;
+  padding-bottom: 90px;
 }
 
 .advantages__headdescription,
@@ -650,7 +651,7 @@ html {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 40px 70px 30px 70px;
+  padding: 45px 70px 35px 70px;
 }
 
 .footer-social__list {
@@ -686,6 +687,7 @@ html {
 .footer-social__website {
   display: flex;
   color: #000000;
+  align-self: end;
 }
 
 .footer-social__telephone:hover {
@@ -744,6 +746,7 @@ html {
   font-size: 60px;
   line-height: 78px;
   margin: 0;
+  margin-bottom: 8px;
 }
 
 .breadcrumbs {
@@ -803,10 +806,6 @@ html {
 
 .breadcrumbs__link:hover {
   color: rgba(255, 255, 255, 0.6);
-}
-
-.breadcrumbs__link:focus {
-  outline: none;
 }
 
 .breadcrumbs__link:active {
@@ -1099,6 +1098,7 @@ html {
 }
 
 .search-results__select {
+  font-family: inherit;
   border: 2px solid #e5e5e5;
   border-radius: 4px;
   color: #333333;
@@ -1276,7 +1276,7 @@ html {
 .hotels__stars-rating {
   width: 140px;
   display: flex;
-  align-items: end;
+  align-items: center;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -1312,6 +1312,7 @@ html {
   margin-top: 40px;
   padding: 0;
   margin-left: 70px;
+  margin-bottom: 60px;
 }
 
 .pagination__item {
@@ -1481,12 +1482,12 @@ html {
   position: absolute;
   content: "";
   display: block;
-  width: 16px;
-  height: 15px;
+  width: 20px;
+  height: 20px;
   background-image: url("../images/svg-images/calendar.svg");
   background-repeat: no-repeat;
-  top: 16px;
-  right: 22px;
+  top: 14px;
+  right: 20px;
 }
 
 .modal-field-container {
