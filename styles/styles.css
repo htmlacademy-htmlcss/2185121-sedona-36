@@ -1661,33 +1661,65 @@ html {
 
 .button-minus {
   border-radius: 4px 0 0 4px;
-  padding-bottom: 8px;
+  padding: 0;
   cursor: pointer;
-  color: rgba(117, 97, 87, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+
+.button-minus-wrapper {
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  background-image: url("../images/svg-images/minus.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  opacity: 0.3;
 }
 
 .button-plus {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
   border-radius: 0 4px 4px 0;
-  padding-top: 3px;
+  padding: 0;
   cursor: pointer;
-  color: rgba(117, 97, 87, 0.3);
 }
 
-.button-plus:hover,
-.button-minus:hover {
-  color: #000000;
+.button-plus-wrapper {
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  background-image: url("../images/svg-images/plus.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  opacity: 0.3;
+
+}
+
+.button-plus:hover .button-plus-wrapper,
+.button-minus:hover .button-minus-wrapper {
+  opacity: 1;
 }
 
 .button-plus:focus,
 .button-minus:focus {
-  color: #000000;
-  outline: 3px solid #82b3d3;
-  z-index: 1;
+  outline: none;
 }
 
-.button-plus:active,
-.button-minus:active {
-  color: rgba(117, 97, 87, 0.3);
+.button-plus:focus .button-plus-wrapper,
+.button-minus:focus .button-minus-wrapper {
+  opacity: 1;
+  outline: 3px solid #82b3d3;
+}
+
+.button-plus:active .button-plus-wrapper,
+.button-minus:active .button-minus-wrapper {
+  opacity: 0.2;
   outline: none;
 }
 
