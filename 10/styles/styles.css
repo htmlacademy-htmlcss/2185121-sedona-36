@@ -169,6 +169,7 @@ html {
   background-color: #ffffff;
   width: 1200px;
   margin: 0 auto;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
 .main-container {
@@ -202,7 +203,7 @@ html {
 
 .navigation__user-list {
   margin-left: auto;
-  max-width: 120px;
+  max-width: 150px;
 }
 
 .navigation__link,
@@ -224,9 +225,19 @@ html {
 .navigation__link:hover {
   background-color: rgba(211, 211, 211, 0.3);
 }
+
+.navigation__link:active {
+  background-color: rgba(211, 211, 211, 0.1);
+}
+
 .logo-link:hover {
   background-color: transparent;
   opacity: 0.6;
+}
+
+.logo-link:active {
+  background-color: transparent;
+  opacity: 0.3;
 }
 
 .navigation__item .navigation__link {
@@ -270,8 +281,6 @@ html {
   display: block;
   background-image: url("../images/svg-images/search.svg");
   background-repeat: no-repeat;
-  /* width: 20px;
-  height: 20px; */
 }
 
 .navigation__user-item:nth-child(2) .navigation__user-link {
@@ -279,13 +288,14 @@ html {
   position: relative;
   background-image: url("../images/svg-images/heart.svg");
   background-repeat: no-repeat;
-  /* width: 20px;
-  height: 20px; */
 }
 
-.navigation__user-item:nth-child(2) .navigation__user-link:hover,
-.navigation__user-item:first-child .navigation__user-link:hover {
+.navigation__user-item .navigation__user-link:hover {
   opacity: 0.6;
+}
+
+.navigation__user-item .navigation__user-link:active {
+  opacity: 0.3;
 }
 
 .navigation__user-number {
@@ -293,11 +303,13 @@ html {
   font-weight: 400;
   font-size: 10px;
   line-height: 10px;
-  width: 20px;
+  min-width: 20px;
+  padding-left: 2px;
+  padding-right: 2px;
   height: 20px;
   color: #ffffff;
   background-color: #7db54f;
-  border-radius: 10px;
+  border-radius: 20px;
   align-items: center;
   justify-content: center;
   position: absolute;
@@ -410,8 +422,6 @@ html {
   width: 60px;
   height: 2px;
   background-color: rgba(0, 0, 0, 0.3);
-  /* top: 86px;
-  left: 58px; */
   left: 50%;
   transform: translate(-50%);
   bottom: -32px;
@@ -632,6 +642,19 @@ html {
   position: relative;
 }
 
+.newsletter__field:active {
+  background-color: #e6e6e6;
+  position: relative;
+  z-index: 2;
+  opacity: 0.6;
+}
+
+.newsletter__field:disabled {
+  opacity: 0.1;
+  position: relative;
+  z-index: 2;
+}
+
 .newsletter__field::placeholder {
   color: #000000;
   opacity: 0.6;
@@ -675,6 +698,7 @@ html {
 }
 
 .footer-social__telephone {
+  max-width: 700px;
   color: #000000;
   text-transform: uppercase;
   text-decoration: none;
@@ -730,7 +754,6 @@ html {
 }
 
 /* catalog form */
-
 .inner-header {
   background-color: #000000;
   background-image: url("../images/filter-background.jpg");
@@ -755,7 +778,6 @@ html {
   margin-bottom: 40px;
   padding: 0;
   display: flex;
-  /* align-items: center; */
 }
 
 .breadcrumbs__item {
@@ -864,6 +886,7 @@ html {
 
 .catalog-filter__group:nth-child(3) .catalog-filter__list {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .catalog-filter__item:not(:last-child) {
@@ -921,12 +944,29 @@ html {
   margin-left: 2px;
 }
 
-.catalog-filter__number-label:hover .catalog-filter__number-input {
+/* .catalog-filter__number-label:hover .catalog-filter__number-input {
+  background-color: #e6e6e6;
+} */
+
+.catalog-filter__number-input:hover {
   background-color: #e6e6e6;
 }
 
 .catalog-filter__number-input:focus {
   outline: 3px solid #83b3d3;
+  position: relative;
+  z-index: 1;
+}
+
+.catalog-filter__number-input:active {
+  outline: 3px solid #4cebd655;
+  opacity: 0.7;
+  position: relative;
+  z-index: 1;
+}
+
+.catalog-filter__number-input:disabled {
+  opacity: 0.2;
   position: relative;
   z-index: 1;
 }
@@ -1003,6 +1043,12 @@ html {
   opacity: 0.1;
 }
 
+/* Убивает hover при disabled состоянии */
+.catalog-filter__radio-label:has(input:disabled):hover,
+.catalog-filter__checkbox-label:has(input:disabled):hover {
+  opacity: 1;
+}
+
 /* filter-range */
 .catalog-filter__range-scale {
   position: relative;
@@ -1040,6 +1086,11 @@ html {
 .catalog-filter__range-toggle:active {
   outline: 2px solid #83b3d3;
   box-shadow: 0 7px 15px rgba(0, 0, 0, 0.4);
+}
+
+.catalog-filter__range-toggle:disabled {
+  box-shadow: 0 7px 15px rgba(0, 0, 0, 0.4);
+  opacity: 0.2;
 }
 
 .toggle-min {
@@ -1091,10 +1142,11 @@ html {
 }
 
 .search-results__title {
-  /* text-align: start; */
+  text-align: start;
   margin-left: 0;
   margin-right: auto;
   align-self: center;
+  max-width: 500px;
 }
 
 .search-results__select {
@@ -1238,6 +1290,10 @@ html {
   opacity: 0.6;
 }
 
+.hotels__link:active {
+  opacity: 0.4;
+}
+
 .hotels__image {
   display: block;
   margin-bottom: 16px;
@@ -1271,6 +1327,11 @@ html {
   font-size: 16px;
   line-height: 20px;
   margin-bottom: auto;
+}
+
+.hotels__favorites.button--green {
+  padding-left: 18px;
+  padding-right: 18px;
 }
 
 .hotels__stars-rating {
@@ -1307,6 +1368,7 @@ html {
 /* pagination */
 .pagination {
   display: flex;
+  flex-wrap: wrap;
   list-style: none;
   margin: 0;
   margin-top: 40px;
@@ -1474,6 +1536,14 @@ html {
   background-color: #f2f2f2;
 }
 
+.modal-form__input:active {
+  opacity: 0.6;
+}
+
+.modal-form__input:disabled {
+  opacity: 0.2;
+}
+
 .modal-input-container {
   position: relative;
 }
@@ -1505,7 +1575,7 @@ html {
   padding: 0;
   margin: 0;
   max-width: 420px;
-  bottom: -25px;
+  top: 52px;
   left: 20px;
 }
 
@@ -1575,6 +1645,10 @@ html {
   background-color: #f2f2f2;
 }
 
+.modal-form__number-input:disabled {
+  opacity: 0.2;
+}
+
 .modal-form__number-input::-webkit-outer-spin-button,
 .modal-form__number-input::-webkit-inner-spin-button {
   appearance: none;
@@ -1620,6 +1694,14 @@ html {
 
 .tooltip-button:focus + .tooltip-description {
   display: block;
+}
+
+.tooltip-button:disabled {
+  opacity: 0.2;
+}
+
+.tooltip-button:disabled + .tooltip-description {
+  display: none;
 }
 
 .tooltip-description {
@@ -1698,7 +1780,6 @@ html {
   background-repeat: no-repeat;
   background-position: 50% 50%;
   opacity: 0.3;
-
 }
 
 .button-plus:hover .button-plus-wrapper,
@@ -1721,6 +1802,11 @@ html {
 .button-minus:active .button-minus-wrapper {
   opacity: 0.2;
   outline: none;
+}
+
+.button-plus:disabled,
+.button-minus:disabled {
+  opacity: 0.2;
 }
 
 /* modal-button */
