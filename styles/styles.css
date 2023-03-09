@@ -41,7 +41,7 @@ html {
 .page-body {
   height: 100%;
   margin: 0;
-  font-family: "PT Sans", Arial, sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 18px;
   line-height: 21px;
   background-color: #f2f2f2;
@@ -62,7 +62,7 @@ html {
 }
 
 .button--blue {
-  font-family: "PT Sans", Arial, sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   display: block;
   background-color: #82b3d3;
   color: #ffffff;
@@ -619,7 +619,7 @@ html {
 }
 
 .newsletter__field {
-  font-family: "PT Sans", Arial, sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   min-width: 452px;
   color: #000000;
   background-color: #f2f2f2;
@@ -902,7 +902,7 @@ html {
 }
 
 .catalog-filter__number-input {
-  font-family: "PT Sans", Arial, sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   padding: 12px 20px;
   padding-right: 40px;
   border-radius: 4px 0 0 4px;
@@ -1128,7 +1128,7 @@ html {
 }
 
 .catalog-filter__button-reset {
-  font-family: "PT Sans", Arial, sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   color: #ffffff;
   background-color: transparent;
   text-align: center;
