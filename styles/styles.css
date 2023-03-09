@@ -1167,7 +1167,7 @@ html {
   border: 2px solid #e5e5e5;
   border-radius: 4px;
   color: #333333;
-  width: 292px;
+  min-width: 292px;
   font-weight: 400;
   font-size: 18px;
   line-height: 21px;
