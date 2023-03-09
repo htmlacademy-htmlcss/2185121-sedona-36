@@ -1166,7 +1166,7 @@ html {
   border: 2px solid #e5e5e5;
   border-radius: 4px;
   color: #333333;
-  min-width: 292px;
+  width: 292px;
   font-weight: 400;
   font-size: 18px;
   line-height: 21px;
@@ -1201,6 +1201,7 @@ html {
   padding: 0;
   display: flex;
   flex-wrap: wrap;
+  max-width: 170px;
 }
 
 .search-results__button {
@@ -1213,6 +1214,10 @@ html {
 
 .search-results__item:not(:last-child) {
   margin-right: 8px;
+}
+
+.search-results__item:not(:first-child):not(:nth-child(2)):not(:nth-child(3)) {
+  margin-top: 5px;
 }
 
 .search-results__item:first-child .search-results__button {
@@ -1471,6 +1476,12 @@ html {
 
 .modal-search {
   width: 717px;
+  max-height: 100%;
+  overflow-y: scroll;
+}
+
+.modal-search::-webkit-scrollbar {
+  width: 0;
 }
 
 .modal__content {
