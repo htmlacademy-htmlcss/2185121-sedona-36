@@ -38,6 +38,11 @@ html {
   height: 100%;
 }
 
+img {
+  height: auto;
+  width: 100%;
+}
+
 /* body */
 .page-body {
   height: 100%;
@@ -1039,8 +1044,12 @@ html {
 .catalog-filter__number-input::-webkit-outer-spin-button,
 .catalog-filter__number-input::-webkit-inner-spin-button {
   -webkit-appearance: none;
-          appearance: none;
+  appearance: none;
   margin: 0;
+}
+
+.catalog-filter__number-input {
+  -moz-appearance: textfield;
 }
 
 .filter-from .catalog-filter__text {
@@ -1297,6 +1306,7 @@ html {
 .search-results__select {
   font-family: inherit;
   border: 2px solid #e5e5e5;
+  background-color: #ffffff;
   border-radius: 4px;
   color: #333333;
   width: 292px;
